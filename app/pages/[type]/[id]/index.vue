@@ -6,6 +6,6 @@ definePageMeta({
 
 <template>
   <div>
-    id
+    {{ useRoute().params.id }}
   </div>
 </template>
