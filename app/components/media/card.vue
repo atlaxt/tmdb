@@ -1,11 +1,14 @@
 <script setup lang="ts">
 defineProps<{
   media: Media
+  mediaType?: MediaType
 }>()
 </script>
 
 <template>
-  <div class="min-w-[180px] max-w-[180px] overflow-hidden cursor-pointer">
+  <div
+    class="min-w-[180px] max-w-[180px] overflow-hidden cursor-pointer"
+  >
     <img
       :src="media.poster_path ? `https://image.tmdb.org/t/p/w300${media.poster_path}` : ''"
       alt=""

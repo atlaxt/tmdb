@@ -1,9 +1,15 @@
 <template>
-  <div class="flex flex-col fixed left-0 top-0 w-screen h-dvh">
-    <app-header />
-    <div class="w-full h-full">
+  <div class="flex flex-col min-h-screen pt-16">
+    <!-- Sabit Header -->
+    <app-header class="fixed top-0 left-0 w-full z-50" />
+
+    <!-- Ana içerik -->
+    <div class="flex-1 flex flex-col">
       <slot />
     </div>
+
+    <!-- Scroll sonunda görünen Footer -->
+    <app-footer class="mt-auto" />
   </div>
 </template>
 

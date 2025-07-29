@@ -12,6 +12,8 @@ const { data: showsData } = useDiscover('tv', 1)
         v-for="movie in moviesData?.results"
         :key="movie.id"
         :media="movie"
+        media-type="movie"
+        @click="useRouter().push({ name: 'media-detail', params: { type: 'movie', id: movie.id } })"
       />
     </div>
     <div class="w-full flex flex-row overflow-x-auto gap-4 p-2">
@@ -19,6 +21,8 @@ const { data: showsData } = useDiscover('tv', 1)
         v-for="show in showsData?.results"
         :key="show.id"
         :media="show"
+        media-type="tv"
+        @click="useRouter().push({ name: 'media-detail', params: { type: 'tv', id: show.id } })"
       />
     </div>
   </div>
