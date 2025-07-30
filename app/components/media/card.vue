@@ -8,6 +8,7 @@ defineProps<{
 <template>
   <div
     class="min-w-[180px] max-w-[180px] overflow-hidden cursor-pointer"
+    @click="useRouter().push({ name: 'media-detail', params: { type: mediaType, id: media.id } })"
   >
     <img
       :src="media.poster_path ? `https://image.tmdb.org/t/p/w300${media.poster_path}` : ''"

@@ -13,16 +13,14 @@ const { data: showsData } = useDiscover('tv', 1)
         :key="movie.id"
         :media="movie"
         media-type="movie"
-        @click="useRouter().push({ name: 'media-detail', params: { type: 'movie', id: movie.id } })"
       />
     </div>
-    <div class="w-full flex flex-row overflow-x-auto gap-4 p-2">
+    <div class="w-full flex flex-row overflow-x-auto gap-4 p-2 mt-12">
       <MediaCard
         v-for="show in showsData?.results"
         :key="show.id"
         :media="show"
         media-type="tv"
-        @click="useRouter().push({ name: 'media-detail', params: { type: 'tv', id: show.id } })"
       />
     </div>
   </div>

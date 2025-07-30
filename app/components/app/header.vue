@@ -30,6 +30,8 @@ const { data: tvGenres } = useGenre('tv')
               color="neutral"
               :label="genre.name"
               variant="link"
+              disabled
+              @click="navigateTo({ name: 'media-genre-list', params: { type: 'movie', genre: genre.id } })"
             />
           </div>
         </template>
@@ -51,8 +53,10 @@ const { data: tvGenres } = useGenre('tv')
               v-for="genre in tvGenres?.genres"
               :key="genre.id"
               color="neutral"
+              disabled
               :label="genre.name"
               variant="link"
+              @click="navigateTo({ name: 'media-genre-list', params: { type: 'tv', genre: genre.id } })"
             />
           </div>
         </template>

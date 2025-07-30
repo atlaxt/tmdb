@@ -4,7 +4,7 @@
     <app-header class="fixed top-0 left-0 w-full z-50" />
 
     <!-- Ana içerik -->
-    <div class="flex-1 flex flex-col">
+    <div class="flex-1 flex flex-col h-full">
       <slot />
     </div>
 

@@ -1,13 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  key: route => route.fullPath,
-  name: 'media-list',
+  name: 'media-genre-list',
 })
-
 const route = useRoute()
-const type = computed(() => (route.params.type as MediaType))
-
-const { data } = useDiscover(type.value, 1)
+const _type = route.params.type as MediaType
+const _genre = route.params.genre as string | number
+const { data } = useDiscover(_type, 1)
 </script>
 
 <template>
