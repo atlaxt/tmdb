@@ -6,6 +6,10 @@ const route = useRoute()
 const _type = route.params.type as MediaType
 const _genre = route.params.genre as string | number
 const { data } = useDiscover(_type, 1)
+
+onMounted(() => {
+
+})
 </script>
 
 <template>
